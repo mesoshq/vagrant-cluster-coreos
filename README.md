@@ -18,6 +18,8 @@ git clone https://github.com/mesoshq/vagrant-cluster-coreos/
 cd vagrant-cluster-coreos
 ```
 
+If you want to use the `cloud-config` mechanism, rename the `user-data.template` file to `user-data` and edit the file according to the [CoreOS docs](https://coreos.com/os/docs/latest/cloud-config.html).
+
 3) Startup and SSH
 
 The VirtualBox provider is the default Vagrant provider. Use this if you are unsure.
@@ -31,7 +33,7 @@ vagrant ssh core-01
 
 `vagrant up` triggers Vagrant to download the latest CoreOS stable box (if necessary) and (re)launch the instances
 
-`vagrant ssh <hostname>` connects you to the virtual machine. The hostnames are core-01 to core-05.
+`vagrant ssh <hostname>` connects you to the virtual machine. The hostnames are core-01 to core-05, the IPs are from 172.17.9.101 to 172.17.9.105.
 
 4) Get started [using CoreOS][using-coreos]
 
