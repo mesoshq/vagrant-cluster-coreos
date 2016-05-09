@@ -9,15 +9,15 @@ CLOUD_CONFIG_PATH = File.join(File.dirname(__FILE__), "user-data")
 CONFIG = File.join(File.dirname(__FILE__), "config.rb")
 
 # Defaults for config options defined in CONFIG
-$num_instances = 5
+$num_instances = 3
 $instance_name_prefix = "core"
 $update_channel = "stable"
 $image_version = "current"
 $enable_serial_logging = false
 $share_home = false
 $vm_gui = false
-$vm_memory = 1536
-$vm_cpus = 1
+$vm_memory = 3072
+$vm_cpus = 2
 $shared_folders = {}
 $forwarded_ports = {}
 
