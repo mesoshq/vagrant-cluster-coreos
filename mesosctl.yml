@@ -1,0 +1,20 @@
+---
+cluster_name: mesosctl_cluster_coreos
+os: coreos
+os_family: CoreOS
+ssh_key_path: ~/.vagrant.d/insecure_private_key
+ssh_port: 22
+ssh_user: vagrant
+dns_servers:
+  - 8.8.8.8
+  - 8.8.4.4
+masters:
+  - 172.17.9.101
+  - 172.17.9.102
+  - 172.17.9.103
+agents:
+  - 172.17.9.101
+  - 172.17.9.102
+  - 172.17.9.103
+registry:
+  - 172.17.9.101
