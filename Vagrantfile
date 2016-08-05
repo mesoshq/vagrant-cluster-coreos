@@ -45,6 +45,7 @@ def vm_cpus
 end
 
 Vagrant.configure("2") do |config|
+
   # always use Vagrants insecure key
   config.ssh.insert_key = false
 
@@ -53,6 +54,12 @@ Vagrant.configure("2") do |config|
       config.vm.box_version = $image_version
   end
   config.vm.box_url = "https://storage.googleapis.com/%s.release.core-os.net/amd64-usr/%s/coreos_production_vagrant.json" % [$update_channel, $image_version]
+
+  # enable hostmanager
+  config.hostmanager.enabled = true
+
+  # configure the host's /etc/hosts
+  config.hostmanager.manage_host = true
 
   config.vm.provider :virtualbox do |v|
     # On VirtualBox, we don't have guest additions or a functional vboxsf
